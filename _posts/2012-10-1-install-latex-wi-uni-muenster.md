@@ -2,8 +2,9 @@
 layout: post
 title: "Install LaTeX for thesis at Uni Münster"
 description: ""
-category:
-tags: []
+category: howto
+tags: [LaTeX, Scientific work]
+alias: /post/32669801602/install-latex-for-thesis-at-uni-munster
 ---
 {% include JB/setup %}
 1. Download MacTex from [here](http://ftp.join.uni-muenster.de/pub/software/CTAN/systems/mac/mactex/MacTeX.pkg) (I linked the Uni Münster Mirror directly since this is a Uni Münster specific guide)
