@@ -16,14 +16,14 @@ tagline: This is about coding. Probably mostly Ruby on Rails.
 
 <!-- Pagination links -->
 <div class="pagination btn-group">
-  {% if paginator.previous %}
-    <a class="btn prev" href="{{ BASE_PATH }}page{{ paginator.previous }}"><i class="icon-chevron-left"></i> Previous</a>
+  {% if paginator.previous_page %}
+    <a class="btn prev" href="/{% if paginator.previous_page > 1 %}page{{ paginator.previous_page }}{% endif %}"><i class="icon-chevron-left"></i> Previous</a>
   {% else %}
     <a class="btn disabled prev"><i class="icon-chevron-left"></i> Previous</a>
   {% endif %}
     <a class="btn">page {{ paginator.page }} of {{ paginator.total_pages }}</a>
-  {% if paginator.next %}
-    <a class="btn next" href="{{ BASE_PATH }}{{ paginator.next }}">Next <i class="icon-chevron-right"></i></a>
+  {% if paginator.next_page %}
+    <a class="btn next" href="/page{{ paginator.next_page }}">Next <i class="icon-chevron-right"></i></a>
   {% else %}
     <a class="btn next disabled">Next <i class="icon-chevron-right"></i></a>
   {% endif %}
