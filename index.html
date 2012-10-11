@@ -5,7 +5,7 @@ tagline: This is about coding. Probably mostly Ruby on Rails.
 ---
 {% include JB/setup %}
 
-{% for post in site.posts %}
+{% for post in paginator.posts %}
     <div class="post">
       <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
       <p><small><strong>{{ post.date | date: "%B %e, %Y" }}</strong></p>
@@ -13,3 +13,18 @@ tagline: This is about coding. Probably mostly Ruby on Rails.
     </div>
     <hr>
 {% endfor %}
+
+<!-- Pagination links -->
+<div class="pagination btn-group">
+  {% if paginator.previous %}
+    <a class="btn prev" href="{{ BASE_PATH }}page{{ paginator.previous }}"><i class="icon-chevron-left"></i> Previous</a>
+  {% else %}
+    <a class="btn disabled prev"><i class="icon-chevron-left"></i> Previous</a>
+  {% endif %}
+    <a class="btn">page {{ paginator.page }} of {{ paginator.total_pages }}</a>
+  {% if paginator.next %}
+    <a class="btn next" href="{{ BASE_PATH }}{{ paginator.next }}">Next <i class="icon-chevron-right"></i></a>
+  {% else %}
+    <a class="btn next disabled">Next <i class="icon-chevron-right"></i></a>
+  {% endif %}
+</div>

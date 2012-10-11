@@ -11,20 +11,6 @@
   <div class="span8">
     {{ content }}
     <hr>
-    <div class="pagination btn-group">
-      {% if page.previous %}
-        <a class="btn prev" href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a>
-      {% else %}
-        <a class="btn disabled prev">&larr; Previous</a>
-      {% endif %}
-        <a class="btn" href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a>
-      {% if page.next %}
-        <a class="btn next" href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a>
-      {% else %}
-        <a class="btn next disabled">Next &rarr;</a>
-      {% endif %}
-    </div>
-    <hr>
     {% include JB/comments %}
   </div>
 
@@ -50,5 +36,21 @@
         </ul>
       </section>
     {% endunless %}
+    <section>
+      <h4 style="margin-bottom: 5px">Sharing is caring</h4>
+      <a href="https://twitter.com/share" class="twitter-share-button" data-via="mschae">Tweet</a>
+      <br />
+      <div class="g-plusone" data-size="medium"></div>
+    </section>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    <script type="text/javascript">
+      window.___gcfg = {lang: 'de'};
+
+      (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+      })();
+    </script>
   </div>
 </div>
